@@ -10,12 +10,12 @@ jobs:
     timeout-minutes: 40
     env:
       VERSION_CODE: ${{ github.run_number }}
-      VERSION_NAME: 1.0.${{ github.run_number }}
+      VERSION_NAME: 1.13.0
     steps:
       - uses: actions/checkout@v4
 
       - name: Unzip project
-        run: unzip -q ./*.zip
+        run: unzip -qo glassnote.zip
 
       - uses: actions/setup-node@v4
         with:
